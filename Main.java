@@ -14,6 +14,7 @@ class Main {
     La aplicación debe permitir el CRUD completo (Crear, Leer, Actualizar, Eliminar) para los estudiantes, debe manejar DTO, debe incorporarse el manejo de excepciones y la documentación de código necesaria, es importante utilizar el MVC visto en clases anteriores.
     */
 
+
 		Vista.menu();
   }
 }
