@@ -15,6 +15,7 @@ class Main {
     */
 
 
-		Vista.menu();
+		Controlador c = new Controlador();
+		c.inicio();
   }
 }

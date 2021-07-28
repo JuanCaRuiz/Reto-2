@@ -8,6 +8,17 @@ public class Modelo {
   private long numero_fijo;
   private String programa;
 
+	public Modelo(String nombre,String apellidos, String fecha,String correo_institucional, String correo_personal, long celular, long numero_fijo, String programa){
+  this.nombre = nombre;
+  this.apellidos = apellidos;
+  fecha_nacimiento = fecha;
+  this.correo_institucional = correo_institucional;
+  this.correo_personal = correo_personal;
+  this.celular = celular;
+  this.numero_fijo = numero_fijo;
+  this.programa = programa;
+  }
+
 	public Modelo(){
 
 	}
@@ -76,7 +87,16 @@ public class Modelo {
 		this.programa = programa;
 	}
 
-	public String toString(){
-		return "Información del estudiante\nNombres: "+this.nombre+"\n"+"Apellidos: "+this.apellidos+"\n"+"Fecha nacimiento: "+this.fecha_nacimiento+"\n"+"Correo institucional: "+this.correo_institucional+"\n"+"Correo personal: "+this.correo_personal+"\n"+"Número de teléfono celular: "+(String)this.celular+"\n"+"Número de teléfono fijo: "+this.numero_fijo+"\n"+"Programa académico: "+this.programa;
-	}
+@Override
+public String toString() {
+  return "Información del estudiante" +"\n"+
+  	"Nombres: " + nombre + "\n" +
+    "Apellidos: " + apellidos + "\n" +
+    "Fecha nacimiento: " + fecha_nacimiento + "\n" +
+    "Correo institucional: " + correo_institucional + "\n" +
+    "Correo personal: " + correo_personal + "\n" +
+    "Número de teléfono celular: " + celular + "\n" +
+    "Número de teléfono fijo: " + numero_fijo +"\n"+
+    "Programa académico: " + programa ;
+}
 }
