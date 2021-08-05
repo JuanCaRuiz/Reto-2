@@ -31,17 +31,16 @@ if(opc > 6){
     System.out.println("Ingresar estudiante");
     try{
       System.out.println("Ingresar nombres: ");
-      n = dato.nextLine();
-      dato.next();
+			dato.nextLine();
+      n = dato.nextLine();  
     }catch(Exception e){
-      System.out.println("Caracter ingresado no permitido");
+      System.out.println("No se pudo ingresar el nombre");
     }
     try{
       System.out.println("Ingresar apellidos:");
       a = dato.nextLine();
-      dato.next();
     }catch(Exception e){
-      System.out.println("Caracter ingresado no permitido");
+      System.out.println("No se pudo ingresar los apellidos");
     }
     try{
       System.out.println("Ingresar fecha de nacimiento (YYYY-MM-DD):");
@@ -55,7 +54,7 @@ if(opc > 6){
       System.out.println("Ingresar correo personal: ");
       cp = dato.next();
     } catch(Exception e){
-      System.out.println("Cuanta de correo incorrecta");
+      System.out.println("Cuenta de correo incorrecta");
     }
     try{
       System.out.println("Ingresar número de celular: ");
@@ -67,7 +66,8 @@ if(opc > 6){
     }
     try{
       System.out.println("Ingresar programa: ");
-      p = dato.next();
+			dato.nextLine();
+      p = dato.nextLine();
       }catch(Exception e){
         System.out.println("Caracter ingresado no permitido");
       }
@@ -87,7 +87,7 @@ if(opc > 6){
       System.out.println("Eliminar estudiante");
 			System.out.println("Ingresar correo institucional:");
       ci = dato.next();
-      dto.eliminarCliente(ci);
+      dto.eliminarEstudiante(ci);
     }
     else if(opc == 5){
       System.out.println("El directorio de los estudiantes ");

@@ -15,7 +15,6 @@ public ArrayList<Modelo> obtenerEstudiantes(){
 }
 
 public void obtenerEstudiante(String correo){
-  System.out.println("Información del estudiante");
   for(int i = 0; i < usuarios.size(); i++){
     if(usuarios.get(i).getCorreo_institucional().equals(correo)){
     System.out.println(usuarios.get(i));
@@ -23,7 +22,25 @@ public void obtenerEstudiante(String correo){
   }
 }
 
-public void eliminarCliente(String correo){
+public void actualizaEstudiante(String correo, String correoPersonal, long cel, long fijo, String programa){
+        if(usuarios.size()>0) {
+            int indice = 0;
+            for (int i = 0; i < usuarios.size(); i++) {
+                if (usuarios.get(i).getCorreo_institucional().equals(correo)) {
+                    indice = i;
+                }
+            }
+            usuarios.get(indice).setCorreo_personal(correoPersonal);
+            usuarios.get(indice).setCelular(cel);
+            usuarios.get(indice).setNumero_fijo(fijo);
+            usuarios.get(indice).setPrograma(programa);
+            System.out.println("Se modificó el estudiante\n");
+        } else {
+            System.out.println("No hay estudiantes registrados");
+        }
+    }
+
+public void eliminarEstudiante(String correo){
 	try{
   int indice = 0;
   for(int i = 0; i < usuarios.size(); i++){
