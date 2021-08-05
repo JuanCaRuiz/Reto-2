@@ -37,13 +37,13 @@ if(opc > 6){
       System.out.println("No se pudo ingresar el nombre");
     }
     try{
-      System.out.println("Ingresar apellidos:");
+      System.out.println("Ingresar apellidos: ");
       a = dato.nextLine();
     }catch(Exception e){
       System.out.println("No se pudo ingresar los apellidos");
     }
     try{
-      System.out.println("Ingresar fecha de nacimiento (YYYY-MM-DD):");
+      System.out.println("Ingresar fecha de nacimiento (YYYY-MM-DD): ");
       f = dato.next();
     }catch(Exception e){
       System.out.println("Error en el formato de fecha ingresado");
@@ -100,3 +100,70 @@ if(opc > 6){
 	
   }
 }
+
+
+/*
+public class Controlador {
+  private Vista view;
+
+  public Controlador(){
+    view = new Vista();
+    inicio();
+  }
+
+  public void inicio(){
+    int opcion = 0;
+    do{
+      view.menu();
+      opcion = view.leerNumeroEntero();
+        switch (opcion){
+          case 1:
+            view.mostrarMensaje("Ingresar estudiante");
+            break;
+          case 2:
+            view.mostrarMensaje("Buscar estudiante");
+            break;
+          case 3:
+            view.mostrarMensaje("Modificar estudiante");
+            break;
+          case 4:
+            view.mostrarMensaje("Eliminar estudiante");
+            break;
+          case 5:
+            view.mostrarMensaje("El directorio de los estudiantes ");
+            break;
+          case 6:
+  	        view.mostrarMensaje("Hasta pronto");
+            break;
+          default:
+	          view.mostrarMensaje("Opción invalida");
+            break;
+      }
+    } while (opcion != 6);
+  }
+
+}
+
+public void ingresarEstudiante(){
+  String n="",a="",f="",ci="",cp="",p="";
+  long c=0,tf=0;
+  view.mostrarMensaje("Ingresar estudiante");
+  n = view.leerDatoString("Ingresar nombres: ");
+  a = view.leerDatoString("Ingresar apellidos: ");
+  f = view.leerDatoString("Ingresar fecha de nacimiento (YYYY-MM-DD): ");
+  ci = view.leerDatoString("Ingresar correo institucional: ");
+  cp = view.leerDatoString("Ingresar correo personal: ");
+  c = view.leerDatoLong("Ingresar número de celular: ");
+  tf = view.leerDatoLong("Ingresar número fijo: ");
+  p = view.leerDatoString("Ingresar programa: ");
+  /*
+  if (instituto.getEstudianteDAO().agregarEstudiante(n,a,f,ci,cp,c,tf,p, instituto.getEstudiantes(), instituto.getFile())){
+    view.mostrarMensaje("Se agregó el estudiante");
+  }else{
+    view.mostrarMensaje("No fue posible agregar al estudiante");
+  }
+  
+}
+
+
+*/
